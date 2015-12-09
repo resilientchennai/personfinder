@@ -51,7 +51,8 @@
       <li>{% blocktrans with begin_sample_volunteer_anchor_tag|safe as begin_tag and end_sample_volunteer_anchor_tag|safe as end_tag %}Here is {{begin_tag}}a sample Volunteer CSV file{{end_tag}} you can edit and upload{% endblocktrans %}
       <li>{% blocktrans with begin_sample_anchor_tag|safe as begin_tag and end_sample_anchor_tag|safe as end_tag %}Here is {{begin_tag}}a sample CSV file{{end_tag}} (including Person and note info together) you can edit and upload{% endblocktrans %}
       <li>{% blocktrans with begin_document_anchor_tag|safe as begin_tag and end_document_anchor_tag|safe as end_tag %}See {{begin_tag}}the wiki{{end_tag}} for more instructions{% endblocktrans %}
-      <li>Important for specifying <b>role</b> column in missing person csv, Possible values are: 'seek' for missing persons and volunteer' for volunteers
+      <li>Missing person and volunteer are different types of records. They should not have common person_record_id(number) value
+      <li>Important for specifying <b>role</b> column in missing person csv, Possible values are: 'seek' for missing persons and volunteer' for volunteers in volunteers csv
       <li>Please include value for <b>skills</b> column in double quotes for volunteer csv
       <li><b>Important</b>: Uploading a new person/volunteer record with already existing person_record_id will overwrite existing record associated with person_record_id
 
