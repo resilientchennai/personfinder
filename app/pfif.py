@@ -413,6 +413,7 @@ PFIF_1_5 = PfifVersion(
             'person_record_id',
             'entry_date',
             'expiry_date',
+            'role',
             'author_name',
             'author_email',
             'author_phone',
@@ -435,6 +436,7 @@ PFIF_1_5 = PfifVersion(
             'home_country',
             'photo_url',
             'profile_urls',
+            'phone_of_found_person',
             'skills'
         ],
         'note': [  # Fields of a <note> element in PFIF 1.5.
