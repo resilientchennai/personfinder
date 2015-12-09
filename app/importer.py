@@ -115,6 +115,8 @@ def create_person(repo, fields):
         home_postal_code=strip(fields.get('home_postal_code')),
         home_country=strip(fields.get('home_country')),
         photo_url=strip(fields.get('photo_url')),
+        role=strip(fields.get('role')),
+        skills=strip(fields.get('skills')),
         profile_urls=strip(fields.get('profile_urls')),
     )
 

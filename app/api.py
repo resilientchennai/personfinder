@@ -86,6 +86,16 @@ def get_tag_params(handler):
                 django.utils.html.escape(handler.env.global_url),
         'end_sample_anchor_tag':
             '</a>',
+        'begin_sample_missing_person_anchor_tag':
+            '<a href="%s/sample-missing-person-import.csv" target="_blank">' %
+                django.utils.html.escape(handler.env.global_url),
+        'end_sample_missing_person_anchor_tag':
+            '</a>',
+        'begin_sample_volunteer_anchor_tag':
+            '<a href="%s/sample-volunteer-import.csv" target="_blank">' %
+                django.utils.html.escape(handler.env.global_url),
+        'end_sample_volunteer_anchor_tag':
+            '</a>',
         'begin_document_anchor_tag':
             '<a href='
             '"https://github.com/google/personfinder/wiki/ImportCSV" '

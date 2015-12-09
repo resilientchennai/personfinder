@@ -47,8 +47,24 @@
   {% if 'persons' in formats %}
     <h2>{% trans "Upload person records in CSV format" %}</h2>
     <ul>
-      <li>{% blocktrans with begin_sample_anchor_tag|safe as begin_tag and end_sample_anchor_tag|safe as end_tag %}Here is {{begin_tag}}a sample CSV file{{end_tag}} you can edit and upload{% endblocktrans %}
+      <li>{% blocktrans with begin_sample_missing_person_anchor_tag|safe as begin_tag and end_sample_missing_person_anchor_tag|safe as end_tag %}Here is {{begin_tag}}a sample Missing Person CSV file{{end_tag}} you can edit and upload{% endblocktrans %}
+      <li>{% blocktrans with begin_sample_volunteer_anchor_tag|safe as begin_tag and end_sample_volunteer_anchor_tag|safe as end_tag %}Here is {{begin_tag}}a sample Volunteer CSV file{{end_tag}} you can edit and upload{% endblocktrans %}
+      <li>{% blocktrans with begin_sample_anchor_tag|safe as begin_tag and end_sample_anchor_tag|safe as end_tag %}Here is {{begin_tag}}a sample CSV file{{end_tag}} (including Person and note info together) you can edit and upload{% endblocktrans %}
       <li>{% blocktrans with begin_document_anchor_tag|safe as begin_tag and end_document_anchor_tag|safe as end_tag %}See {{begin_tag}}the wiki{{end_tag}} for more instructions{% endblocktrans %}
+      <li>Important for specifying <b>role</b> column in missing person csv, Possible values are: 'seek' for missing persons and volunteer' for volunteers
+      <li>Please include value for <b>skills</b> column in double quotes for volunteer csv
+      <li><b>Important</b>: Uploading a new person/volunteer record with already existing person_record_id will overwrite existing record associated with person_record_id
+
+    </ul>
+
+     Note: Possible values for 'status' column in missing person csv can be one of the following
+    <ul>
+      <li>''(empty) indicates 'Unspecified',
+      <li> 'information_sought' indicates 'I am seeking information',
+      <li> 'is_note_author' indicates 'I am this person',
+      <li> 'believed_alive' indicates 'I have received information that this person is alive',
+      <li> 'believed_missing' indicates 'I have reason to think this person is missing',
+      <li> 'believed_dead' indicates 'I have received information that this person is dead',
     </ul>
     <form method="post" enctype="multipart/form-data">
       <table>
